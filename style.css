@@ -11,12 +11,39 @@ html{
 }
 
 body{
-    background: url(img/background.jpg)
-        no-repeat;
     font-size: 1.6rem;
     font-family: "Coiny", sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.image{
+    text-align: left;
+    max-width: 60rem;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    padding: clamp(3rem, 1rem + 10vw, 7rem);
+}
+
+.header{
+    line-height: -10rem;
+}
+
+.header p{
+    font-size: 2.4rem;
+}
+
+.header h1{
+    margin-top: 3rem;
 }
