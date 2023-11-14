@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: url(img/background.jpg)
+        no-repeat;
+    font-size: 1.6rem;
+    font-family: "Coiny", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
