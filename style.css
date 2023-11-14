@@ -44,6 +44,28 @@ body{
     font-size: 2.4rem;
 }
 
-.header h1{
+.header h2{
     margin-top: 3rem;
 }
+
+.register-container{
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+}
+
+.inputs input{
+    padding: 1.5rem;
+    min-width: 40rem;
+    border: none;
+    background-color: #eee;
+    border-bottom: 3px solid #9b9a9a;
+}
+
