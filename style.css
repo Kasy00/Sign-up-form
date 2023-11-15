@@ -22,10 +22,8 @@ html{
 body{
     font-size: 1.6rem;
     font-family: "Coiny", sans-serif;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 .container{
@@ -35,28 +33,73 @@ body{
 
 .image{
     text-align: left;
-    max-width: 60rem;
+    width: 40vw;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.left-background{
+    background-image: url(img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40vw;
+    height: 100%;
+}
+
+.tp-header{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -70%);
+    text-align: center;
+    opacity: 0.2;
+    padding: 2rem;
+}
+
+.odin-link{
+    text-decoration: none;
+}
+
+.odin-link > img{
+    width: 4rem;
+    height: auto;
+}
+
+.tp-header:hover{
+    opacity: 0.6;
 }
 
 .form-container{
     display: flex;
     flex-direction: column;
+    flex-flow: row wrap;
     background-image: linear-gradient(to right, var(--bg-blue), var(--bg-red));
     padding: clamp(3rem, 1rem + 10vw, 7rem);
+    text-wrap: wrap;
+    width: 60vw;
+    height: 100%;
 }
 
 .header{
-    line-height: -10rem;
+    font-size: 2rem;
+    width: 90%;
+    text-wrap: wrap;
 }
 
 .header p{
     font-size: 2.4rem;
     color: var(--primary-white);
+    text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
+    text-wrap: wrap;
 }
 
 .header h2{
     margin-top: 3rem;
     color: var(--primary-white);
+    text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
+    text-wrap: wrap;
 }
 
 .register-container{
@@ -68,6 +111,7 @@ body{
 
 h1{
     color: var(--primary-white);
+    text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
 }
 
 .inputs{
@@ -83,7 +127,7 @@ h1{
 
 .inputs input{
     padding: 1.5rem;
-    min-width: 40rem;
+    min-width: 30rem;
     border: none;
     background-color: var(--default-gray);
     border-bottom: 0.3rem solid var(--default-border);
@@ -119,6 +163,7 @@ input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
     border: 0.2rem solid var(--primary-white);
     outline: none;
     transition: 0.3s ease-in-out;
+    text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
 }
 
 #submit:hover{
@@ -133,17 +178,22 @@ input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
 #login{
     font-size: 2rem;
     color: var(--primary-white);
+    text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
 }
 
-a{
+span a{
     text-decoration: none;
     text-transform: uppercase;
     color: var(--primary-white);
 }
 
-a:hover{
+span a:hover{
     text-decoration: underline;
     color: var(--bg-red);
 }
 
-
+@media screen and (max-width: 768px) {
+    .inputs {
+        grid-template-columns: 1fr;
+    }
+}
