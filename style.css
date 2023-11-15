@@ -32,7 +32,7 @@ body{
 .form-container{
     display: flex;
     flex-direction: column;
-    background-color: #eee;
+    background-image: linear-gradient(to right, #2BCBD9, #E21A4B);
     padding: clamp(3rem, 1rem + 10vw, 7rem);
 }
 
@@ -42,10 +42,12 @@ body{
 
 .header p{
     font-size: 2.4rem;
+    color: #fff;
 }
 
 .header h2{
     margin-top: 3rem;
+    color: #fff;
 }
 
 .register-container{
@@ -53,6 +55,10 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+}
+
+h1{
+    color: #fff;
 }
 
 .inputs{
@@ -63,7 +69,7 @@ body{
     -webkit-box-shadow: 0px 16px 13px -16px rgba(66, 68, 90, 1);
     -moz-box-shadow: 0px 16px 13px -16px rgba(66, 68, 90, 1);
     box-shadow: 0px 16px 13px -16px rgba(66, 68, 90, 1);
-    padding: 1rem;
+    padding: 1rem 1rem 3.4rem 1rem;
 }
 
 .inputs input{
@@ -75,13 +81,13 @@ body{
 }
 
 input:focus{
-    border-bottom: 0.3rem solid #9b9a9a;
+    border-bottom: 0.3rem solid #000000;
     outline: none;
 }
 
 input:not(:focus):not(:placeholder-shown):invalid{
     outline: none;
-    border-bottom: 0.3rem solid red;
+    border-bottom: 0.4rem solid #E21A4B;
 }
 
 input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
@@ -90,7 +96,7 @@ input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
 
   input:not(:focus):not(:placeholder-shown):valid {
     outline: none;
-    border-bottom: 0.3rem solid green;
+    border-bottom: 0.4rem solid green;
   }
 
 #submit{
@@ -99,15 +105,29 @@ input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
     min-width: 40rem;
     border-radius: 0.6rem;
     cursor: pointer;
-    font-size: 2rem;
+    font-family: "Coiny", sans-serif;
+    font-size: 2.4rem;
 }
 
 #submit:hover{
-    background-color: rgb(126, 250, 88);
+    background-color: #E21A4B;
+    color: #fff;
 }
 
 #login{
     font-size: 2rem;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #E21A4B;
 }
 
 
