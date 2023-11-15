@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
 
+:root{
+    --bg-blue: #2BCBD9;
+    --bg-red: #E21A4B;
+    --primary-white: #fff;
+    --valid-input: rgb(70, 209, 16);
+    --default-border: #9b9a9a;
+    --default-gray: #eee;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -32,7 +41,7 @@ body{
 .form-container{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to right, #2BCBD9, #E21A4B);
+    background-image: linear-gradient(to right, var(--bg-blue), var(--bg-red));
     padding: clamp(3rem, 1rem + 10vw, 7rem);
 }
 
@@ -42,12 +51,12 @@ body{
 
 .header p{
     font-size: 2.4rem;
-    color: #fff;
+    color: var(--primary-white);
 }
 
 .header h2{
     margin-top: 3rem;
-    color: #fff;
+    color: var(--primary-white);
 }
 
 .register-container{
@@ -58,7 +67,7 @@ body{
 }
 
 h1{
-    color: #fff;
+    color: var(--primary-white);
 }
 
 .inputs{
@@ -76,8 +85,8 @@ h1{
     padding: 1.5rem;
     min-width: 40rem;
     border: none;
-    background-color: #eee;
-    border-bottom: 0.3rem solid #9b9a9a;
+    background-color: var(--default-gray);
+    border-bottom: 0.3rem solid var(--default-border);
 }
 
 input:focus{
@@ -87,7 +96,7 @@ input:focus{
 
 input:not(:focus):not(:placeholder-shown):invalid{
     outline: none;
-    border-bottom: 0.4rem solid #E21A4B;
+    border-bottom: 0.4rem solid var(--bg-red);
 }
 
 input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
@@ -96,38 +105,45 @@ input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
 
   input:not(:focus):not(:placeholder-shown):valid {
     outline: none;
-    border-bottom: 0.4rem solid green;
+    border-bottom: 0.4rem solid var(--valid-input);
   }
 
 #submit{
     margin-top: 3.5rem;
     padding: 1.5rem;
     min-width: 40rem;
-    border-radius: 0.6rem;
+    border-radius: 0.8rem;
     cursor: pointer;
     font-family: "Coiny", sans-serif;
     font-size: 2.4rem;
+    border: 0.2rem solid var(--primary-white);
+    outline: none;
+    transition: 0.3s ease-in-out;
 }
 
 #submit:hover{
-    background-color: #E21A4B;
-    color: #fff;
+    background-color: var(--bg-red);
+    color: var(--primary-white);
+}
+
+#submit:active{
+    transform: scale(0.9);
 }
 
 #login{
     font-size: 2rem;
-    color: #fff;
+    color: var(--primary-white);
 }
 
 a{
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--primary-white);
 }
 
 a:hover{
     text-decoration: underline;
-    color: #E21A4B;
+    color: var(--bg-red);
 }
 
 
